@@ -1,17 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  value: 0,
   status: 'idle',
   todos: [],
   selectedTodo: null,
   isEditTodoModalOpen: false,
   newTodo: null,
-  isAddTodoTodoModalOpen: false
+  isAddTodoModalOpen: false
 };
 
 export const todoSlice = createSlice({
-  name: 'counter',
+  name: 'todo',
   initialState,
   reducers: {
     setTodos: (state, action) => {
@@ -27,7 +26,7 @@ export const todoSlice = createSlice({
         state.newTodo = action.payload;
     },
     setIsAddTodoModalOpen: (state, action) => {
-        state.isAddTodoTodoModalOpen = action.payload
+        state.isAddTodoModalOpen = action.payload
     }
   }
 });
